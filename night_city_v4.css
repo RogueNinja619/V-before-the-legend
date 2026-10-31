@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+/* NIGHT CITY DOSSIER / ORIGINAL V CHARACTER PROFILE / 2077 */
+:root{--nc-yellow:#fcee0a;--nc-cyan:#00e5f0;--nc-pink:#f44a7a;--nc-bg:#070a0e;--nc-ink:#0d141b;--nc-surface:#111920;--nc-border:#2f424a;--nc-white:#edf1ed;--nc-muted:#99aab0;--nc-width:1150px;--nc-display:'Barlow Condensed',Impact,sans-serif;--nc-mono:'Share Tech Mono',monospace;--nc-body:Inter,Arial,sans-serif}
+/* CHUB PAGE FRAME — selectors follow the Ant Design structure found in working creator pages */
+body:has(.nc-page){background-color:#080c11!important;background-image:radial-gradient(ellipse at 70% 5%,rgba(0,229,240,.08),transparent 55%),radial-gradient(ellipse at 0% 72%,rgba(244,74,122,.065),transparent 45%),linear-gradient(180deg,#0c131a,#080b10)!important;min-height:100dvh!important}
+body:has(.nc-page) .galaxy-bg{background-image:none!important}
+body:has(.nc-page) .ant-row.ant-row-center{margin-left:auto!important;margin-right:auto!important;padding-left:12px!important;padding-right:12px!important}
+@media(min-width:992px){body:has(.nc-page) .ant-row.ant-row-center>.ant-col-lg-6:first-child{flex:0 0 100%!important;max-width:var(--nc-width)!important;margin:0 auto 22px!important;min-height:210px!important;padding:22px!important;background:linear-gradient(120deg,#131a20,#08131b 65%,#13242a)!important;border-bottom:3px solid var(--nc-yellow)!important;box-shadow:0 10px 38px #0008!important}body:has(.nc-page) .ant-row.ant-row-center>.ant-col-lg-18{flex:0 0 100%!important;max-width:100%!important;padding:0!important}}
+body:has(.nc-page) .ant-col.ant-col-xs-24.ant-col-lg-18>.ant-row{padding-top:0!important;margin-top:0!important}
+body:has(.nc-page) .ant-ribbon-text{display:none!important}
+/* DECORATIVE ATMOSPHERE */
+.nc-field{position:fixed!important;inset:0!important;pointer-events:none!important;overflow:hidden!important;z-index:0!important;background-image:linear-gradient(rgba(0,229,240,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,240,.025) 1px,transparent 1px)!important;background-size:48px 48px!important}
+.nc-field .nc-glow{position:absolute!important;width:350px!important;height:350px!important;border-radius:50%!important;filter:blur(75px)!important;opacity:.13!important;background:var(--nc-pink)!important;top:8%!important;right:-140px!important;animation:nc-float 12s ease-in-out infinite alternate!important}
+.nc-field .nc-glow.two{background:var(--nc-cyan)!important;top:70%!important;right:auto!important;left:-170px!important;animation-delay:-6s!important}
+@keyframes nc-float{from{transform:translateY(-20px)}to{transform:translateY(40px)}}
+/* MAIN DOSSIER */
+.nc-page{font-family:var(--nc-body)!important;font-size:14px!important;line-height:1.55!important;box-sizing:border-box!important;position:relative!important;z-index:1!important;width:100%!important;max-width:var(--nc-width)!important;margin:0 auto!important;padding:0 12px 34px!important;color:var(--nc-white)!important}
+.nc-page *{box-sizing:border-box!important}
+.nc-page .nc-hero{position:relative!important;overflow:hidden!important;padding:30px clamp(16px,4vw,46px)!important;background:linear-gradient(108deg,#fcee0a 0%,#eddb07 60%,#f2d307 100%)!important;color:#0a1417!important;clip-path:polygon(0 0,100% 0,100% calc(100% - 19px),calc(100% - 19px) 100%,0 100%)!important}
+.nc-hero:after{content:'NC // 77'!important;position:absolute!important;right:18px!important;top:-7px!important;opacity:.1!important;font:900 clamp(76px,13vw,160px)/1 var(--nc-display)!important;white-space:nowrap!important;pointer-events:none!important}
+.nc-page .nc-kicker{font:600 11px var(--nc-mono)!important;letter-spacing:2px!important;text-transform:uppercase!important;margin:0 0 9px!important;position:relative!important;z-index:1!important}
+.nc-page .nc-hero-title{font:900 clamp(32px,5.7vw,64px)/.98 var(--nc-display)!important;letter-spacing:1px!important;margin:0!important;text-transform:uppercase!important;position:relative!important;z-index:1!important}
+.nc-page .nc-hero-sub{font:500 13px/1.65 var(--nc-body)!important;max-width:540px!important;margin:14px 0 0!important;position:relative!important;z-index:1!important}
+.nc-page .nc-tags{display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin-top:18px!important;position:relative!important;z-index:1!important}
+.nc-page .nc-tag{display:inline-block!important;padding:5px 8px!important;background:#111f24!important;color:var(--nc-yellow)!important;border:1px solid #111f24!important;font:600 10px var(--nc-mono)!important;letter-spacing:.8px!important}
+/* INFO AREA */
+.nc-page .nc-summary{display:grid!important;grid-template-columns:minmax(190px,31%) 1fr!important;gap:16px!important;margin-top:17px!important;align-items:stretch!important}
+.nc-page .nc-portrait{position:relative!important;min-height:330px!important;overflow:hidden!important;background:linear-gradient(140deg,#172837,#0e1018)!important;border:1px solid var(--nc-border)!important;border-left:3px solid var(--nc-cyan)!important}
+.nc-page .nc-portrait img{width:100%!important;height:100%!important;min-height:330px!important;object-fit:cover!important;object-position:50% 30%!important;display:block!important;filter:saturate(.82) contrast(1.08)!important}
+.nc-page .nc-portrait:after{content:'FILE: V-2077 / CORPORATE DEFECTOR'!important;position:absolute!important;inset:auto 0 0!important;background:linear-gradient(transparent,#061017ed)!important;color:var(--nc-cyan)!important;padding:35px 12px 10px!important;font:10px var(--nc-mono)!important;letter-spacing:1px!important}
+.nc-page .nc-info-stack{display:flex!important;flex-direction:column!important;gap:13px!important;min-width:0!important}
+.nc-page .nc-card{padding:19px!important;background:linear-gradient(160deg,#131e24,#0e141b)!important;border:1px solid var(--nc-border)!important;border-top:2px solid #3c5960!important;color:var(--nc-white)!important;box-shadow:0 5px 25px #0005!important;position:relative!important;min-width:0!important}
+.nc-page .nc-card-title{margin:0 0 10px!important;color:var(--nc-cyan)!important;font:700 12px var(--nc-mono)!important;letter-spacing:1.5px!important;text-transform:uppercase!important}
+.nc-page .nc-card p{font:400 13px/1.75 var(--nc-body)!important;color:#c9d8dc!important;margin:0!important}
+.nc-page .nc-card strong{color:var(--nc-yellow)!important}
+/* SCENARIO DIRECTORY */
+.nc-page .nc-scenarios{margin-top:17px!important;display:grid!important;grid-template-columns:minmax(190px,31%) 1fr!important;gap:16px!important;align-items:stretch!important}
+.nc-page .nc-terminal{background:radial-gradient(ellipse at 50% 27%,rgba(0,229,240,.16),transparent 58%),linear-gradient(165deg,#111b25,#081118)!important;border:1px solid var(--nc-border)!important;border-left:3px solid var(--nc-pink)!important;padding:22px 16px!important;min-height:480px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;position:relative!important;overflow:hidden!important}
+.nc-terminal:before{content:''!important;position:absolute!important;inset:0!important;background:repeating-linear-gradient(180deg,transparent,transparent 5px,rgba(0,229,240,.027) 6px)!important;pointer-events:none!important}
+.nc-page .nc-terminal-code{font:700 clamp(54px,8vw,90px)/1 var(--nc-display)!important;color:var(--nc-cyan)!important;text-shadow:0 0 38px #00e5f05e!important;z-index:1!important}
+.nc-page .nc-terminal-desc{font:11px/1.8 var(--nc-mono)!important;letter-spacing:1px!important;color:var(--nc-muted)!important;z-index:1!important;margin-top:12px!important}
+.nc-page .nc-terminal-label{font:900 26px var(--nc-display)!important;letter-spacing:2px!important;color:var(--nc-yellow)!important;z-index:1!important;margin-top:17px!important}
+.nc-page .nc-directory{border:1px solid var(--nc-border)!important;background:#0e151b!important;overflow:hidden!important;min-width:0!important;box-shadow:0 5px 25px #0005!important}
+.nc-page .nc-list-head{padding:17px 20px!important;background:#17212a!important;border-bottom:2px solid var(--nc-yellow)!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important}
+.nc-page .nc-list-heading{font:800 18px var(--nc-display)!important;letter-spacing:1.2px!important;color:var(--nc-yellow)!important;text-transform:uppercase!important;margin:0!important}
+.nc-page .nc-list-hint{font:10px var(--nc-mono)!important;color:var(--nc-cyan)!important;white-space:nowrap!important}
+.nc-page .nc-entries{max-height:700px!important;overflow-y:auto!important;overscroll-behavior:contain!important;scrollbar-color:#345766 #0b1116!important;scrollbar-width:thin!important}
+.nc-page .nc-entry{display:flex!important;align-items:center!important;gap:15px!important;padding:14px 18px!important;border-bottom:1px solid #26343b!important;border-left:3px solid transparent!important;transition:background .2s,border-color .2s!important;background:transparent!important}
+.nc-page .nc-entry:nth-child(odd){background:#121c23!important}
+.nc-page .nc-entry:hover{background:#203037!important;border-left-color:var(--nc-cyan)!important}
+.nc-page .nc-entry.nc-default{background:#282918!important;border-left-color:var(--nc-yellow)!important}
+.nc-page .nc-num{flex:0 0 35px!important;font:700 19px var(--nc-mono)!important;color:var(--nc-pink)!important}
+.nc-page .nc-default .nc-num{color:var(--nc-yellow)!important}
+.nc-page .nc-entry-text{min-width:0!important;flex:1!important}
+.nc-page .nc-entry-name{font:700 14px/1.35 var(--nc-body)!important;color:var(--nc-white)!important;margin:0!important}
+.nc-page .nc-entry-meta{font:11px/1.6 var(--nc-body)!important;color:var(--nc-muted)!important;margin:3px 0 0!important}
+.nc-page .nc-entry:hover .nc-entry-name{color:var(--nc-yellow)!important}
+.nc-page .nc-section-end{padding:18px 24px!important;border-top:1px solid #294650!important;margin-top:16px!important;background:linear-gradient(90deg,#0f1b24,#101018)!important;text-align:center!important;font:11px/1.8 var(--nc-mono)!important;letter-spacing:.5px!important;color:var(--nc-muted)!important}
+.nc-page .nc-section-end strong{color:var(--nc-yellow)!important}
+/* MOBILE */
+@media(max-width:720px){.nc-page{padding:0 8px 22px!important}.nc-page .nc-summary,.nc-page .nc-scenarios{grid-template-columns:1fr!important;gap:12px!important}.nc-page .nc-portrait{height:240px!important;min-height:240px!important}.nc-page .nc-portrait img{height:240px!important;min-height:240px!important;object-position:center 32%!important}.nc-page .nc-terminal{min-height:150px!important;padding:12px!important}.nc-page .nc-terminal-code{font-size:46px!important}.nc-page .nc-terminal-desc{margin-top:4px!important}.nc-page .nc-terminal-label{margin-top:6px!important;font-size:20px!important}.nc-page .nc-entries{max-height:560px!important}.nc-page .nc-entry{padding:12px!important;gap:10px!important}.nc-page .nc-hero{padding:24px 16px!important}.nc-page .nc-list-head{padding:15px!important}.nc-page .nc-list-hint{font-size:9px!important}}
+@media(prefers-reduced-motion:reduce){.nc-field .nc-glow,.nc-page *{animation:none!important;transition:none!important}}
+
+
+/* V4 CHUB FIX: custom <spacer> tags get inserted between every creator-note element. They break grid placement! */
+body:has(.nc-page) spacer, .nc-page spacer, .nc-summary > spacer, .nc-scenarios > spacer {display:none!important;width:0!important;height:0!important;min-width:0!important;min-height:0!important;margin:0!important;padding:0!important;visibility:hidden!important;overflow:hidden!important;position:absolute!important}
+/* Two real grid children per row. Prevent injected markup from pushing V to the right. */
+.nc-page .nc-summary {display:grid!important;grid-template-columns:minmax(0, 34%) minmax(0, 1fr)!important;grid-auto-flow:row!important;gap:16px!important;align-items:stretch!important;width:100%!important}
+.nc-page .nc-summary > .nc-portrait {display:block!important;grid-column:1!important;grid-row:1!important;width:100%!important;min-width:0!important;max-width:100%!important;align-self:stretch!important;margin:0!important}
+.nc-page .nc-summary > .nc-info-stack {display:flex!important;grid-column:2!important;grid-row:1!important;min-width:0!important;width:100%!important;max-width:100%!important;margin:0!important}
+.nc-page .nc-portrait img {width:100%!important;height:100%!important;min-height:330px!important;object-fit:cover!important;object-position:center 24%!important}
+.nc-page .nc-scenarios {display:grid!important;grid-template-columns:minmax(0,34%) minmax(0,1fr)!important;gap:16px!important;width:100%!important}
+.nc-page .nc-scenarios > .nc-terminal {grid-column:1!important;grid-row:1!important;min-width:0!important}
+.nc-page .nc-scenarios > .nc-directory {grid-column:2!important;grid-row:1!important;min-width:0!important}
+/* Native Chub profile photo is redundant. Hide ONLY image and image-specific ancestor, never entire profile column. */
+body:has(.nc-page) .ant-row.ant-row-center > .ant-col-lg-6:first-child .ant-image {display:none!important}
+body:has(.nc-page) .ant-row.ant-row-center > .ant-col-lg-6:first-child .ant-ribbon-wrapper:has(.ant-image) {display:none!important}
+/* The old first-column 100% forced card is the giant empty region seen at extreme zoom. Compact native action area. */
+@media(min-width:992px){
+body:has(.nc-page) .ant-row.ant-row-center>.ant-col-lg-6:first-child{flex:0 0 100%!important;max-width:var(--nc-width)!important;min-height:0!important;width:100%!important;margin:0 auto 8px!important;padding:8px 12px!important;background:linear-gradient(95deg,#111e26,#0b1219)!important;border:1px solid #344c56!important;border-top:2px solid var(--nc-yellow)!important;box-shadow:none!important;border-radius:0!important;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;gap:10px!important}
+body:has(.nc-page) .ant-row.ant-row-center>.ant-col-lg-18{flex:0 0 100%!important;max-width:100%!important;min-width:0!important;padding:0!important}
+}
+/* Native chat/import/download action row: keep actual Chub controls, theme rather than recreating them. */
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square){display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:8px!important;position:relative!important;width:auto!important;max-width:100%!important;min-height:0!important;margin:0!important;padding:0!important;background:transparent!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square)>.flex{display:flex!important;align-items:center!important;gap:8px!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square) button.ant-btn{box-sizing:border-box!important;height:40px!important;min-height:40px!important;min-width:0!important;width:auto!important;padding:0 16px!important;border-radius:2px!important;background:#111f27!important;border:1px solid #3c6571!important;box-shadow:inset 0 0 0 1px #0c1419!important;color:var(--nc-cyan)!important;font:700 12px var(--nc-mono)!important;letter-spacing:.5px!important;transition:background .2s,border-color .2s,color .2s!important;clip-path:none!important;text-transform:uppercase!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;white-space:nowrap!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square) button.ant-btn:hover{background:#1e3039!important;color:var(--nc-yellow)!important;border-color:var(--nc-yellow)!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square)>button.ant-btn:has(svg.lucide-messages-square){background:var(--nc-yellow)!important;color:#0b1419!important;border:1px solid var(--nc-yellow)!important;font-weight:900!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square)>button.ant-btn:has(svg.lucide-messages-square):hover{background:#fff66a!important;color:#101419!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square) button.ant-btn svg{stroke:currentColor!important}
+@media(max-width:720px){
+.nc-page .nc-summary,.nc-page .nc-scenarios{grid-template-columns:1fr!important}
+.nc-page .nc-summary > .nc-portrait,.nc-page .nc-scenarios > .nc-terminal {grid-column:1!important;grid-row:1!important}
+.nc-page .nc-summary > .nc-info-stack,.nc-page .nc-scenarios > .nc-directory{grid-column:1!important;grid-row:2!important}
+.nc-page .nc-portrait{height:300px!important;min-height:300px!important}
+.nc-page .nc-portrait img{height:300px!important;min-height:300px!important}
+body:has(.nc-page) .ant-row.ant-row-center>.ant-col-lg-6:first-child{min-height:0!important;padding:8px!important}
+body:has(.nc-page) div.mt-4:has(svg.lucide-messages-square) button.ant-btn{height:36px!important;min-height:36px!important;padding:0 10px!important;font-size:10px!important}
+}
